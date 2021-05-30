@@ -5,7 +5,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
 
-//Entity Class corresponding to the StateEntity table in Restaurant Db
+//Entity Class corresponding to the State table in Restaurant Db
 @Entity
 @Table(name = "state",uniqueConstraints = {@UniqueConstraint(columnNames = {"uuid"})})
 @NamedQueries(
