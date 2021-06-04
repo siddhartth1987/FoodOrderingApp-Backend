@@ -45,4 +45,12 @@ public class RestExceptionHandler {
                 .message(exc.getErrorMessage()),
                 HttpStatus.FORBIDDEN);
     }
+
+    @ExceptionHandler(PaymentMethodNotFoundException.class)
+    public ResponseEntity<ErrorResponse> paymentMethodNotFoundException(PaymentMethodNotFoundException exc , WebRequest request) {
+        return new ResponseEntity<ErrorResponse>(new ErrorResponse()
+                .code(exc.getCode())
+                .message(exc.getErrorMessage()),
+                HttpStatus.NOT_FOUND);
+    }
 }
