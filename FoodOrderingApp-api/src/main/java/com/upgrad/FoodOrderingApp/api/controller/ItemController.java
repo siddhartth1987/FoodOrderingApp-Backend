@@ -41,8 +41,8 @@ public class ItemController {
         RestaurantEntity restaurantEntity = restaurantService.restaurantByUUID(restaurantUuid);
 
         // get popular items
-        // pending: dummy list till method to get popular items is available after implementation of Order API
-        List<ItemEntity> itemEntities = new ArrayList<ItemEntity>();
+
+        List<ItemEntity> itemEntities = itemService.getItemsByPopularity(restaurantEntity);
 
         // generating response
         ItemListResponse itemListResponse = new ItemListResponse();
